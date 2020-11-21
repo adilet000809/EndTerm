@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using EndTerm.Data;
 using EndTerm.Repository;
 using EndTerm.Repository.Impl;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EndTerm
 {
@@ -26,18 +29,46 @@ namespace EndTerm
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called     by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+            services.AddIdentity<IdentityUser, IdentityRole>()  
+                .AddEntityFrameworkStores<ApplicationDbContext>()  
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>  
+            {  
+                options.SaveToken = true;  
+                options.RequireHttpsMetadata = false;  
+                options.TokenValidationParameters = new TokenValidationParameters()  
+                {  
+                    ValidateIssuer = true,
+                    ValidateAudience = true,  
+                    ValidAudience = Configuration["JWT:ValidAudience"],  
+                    ValidIssuer = Configuration["JWT:ValidIssuer"],  
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))  
+                };  
+            });
+            
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IOblastRepository, OblastRepository>();
+            services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<IFavouritesRepository, FavouritesRepository>();
+            services.AddTransient<IFavouritesItemRepository, FavouritesItemRepository>();
+            services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

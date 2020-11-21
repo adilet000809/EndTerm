@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace EndTerm.Models
 {
@@ -18,8 +19,16 @@ namespace EndTerm.Models
         [Required]
         public Category Category { get; set; }
         [Required]
-        public int AddressId { get; set; }
+        public int OblastId { get; set; }
         [Required]
-        public Address Address { get; set; }
+        public Oblast Oblast { get; set; }
+        [Required]
+        public int CityId { get; set; }
+        [Required]
+        public City City { get; set; }
+        [Required]
+        public int UserId { get; set; }
+        [Required]
+        public IdentityUser User { get; set; }
     }
 }

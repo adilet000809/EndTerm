@@ -11,12 +11,12 @@ namespace EndTerm.Controllers.Api
     [ApiController]
     [Produces(MediaTypeNames.Application.Json)]
     [Route("api/[controller]")]
-    public class MainController : ControllerBase
+    public class CategoryController : ControllerBase
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public MainController(
+        public CategoryController(
             ICategoryRepository categoryRepository, 
             UserManager<IdentityUser> userManager)
         {
@@ -44,7 +44,7 @@ namespace EndTerm.Controllers.Api
         }
         
         [HttpPost("categories/update")]
-        public IActionResult AddToCart(JsonElement request)
+        public IActionResult UpdateCategory(JsonElement request)
         {
             var categoryId = request.GetProperty("categoryId").GetInt32();
             var categoryName = request.GetProperty("categoryName").GetString();
@@ -56,7 +56,7 @@ namespace EndTerm.Controllers.Api
         }
         
         [HttpDelete("categories/{categoryId}")]
-        public IActionResult   DeleteCartItem(int categoryId)
+        public IActionResult DeleteCategory(int categoryId)
         {
             var result = _categoryRepository.Delete(categoryId);
             if (result == null) return BadRequest("Item not found");  

@@ -6,18 +6,106 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a807c185-87cf-4532-9ed6-d1b09a7def83" name="Default Changelist" comment="" />
+    <list default="true" id="a807c185-87cf-4532-9ed6-d1b09a7def83" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/FavouritesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201121075657_2nd migration.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201121075657_2nd migration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Models/City.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Models/Favourites.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/ICityRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/IFavouritesItemRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/IFavouritesRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/IOblastRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/Impl/CityRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/Impl/FavouritesItemRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Repository/Impl/FavouritesRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources/16dabb8d-e693-4fe4-92b9-d99491ac74c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources/16dabb8d-e693-4fe4-92b9-d99491ac74c0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/dataSources/8018258a-dd40-47b2-90b7-60279ece21df.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/EndTerm.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/EndTerm.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Models/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Repository/IAddressRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Repository/Impl/AddressRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Repository/Impl/OblastRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/ref/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/ref/EndTerm.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/ref/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/ref/EndTerm.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/EndTerm.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/EndTerm.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/project.packagespec.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A646A1B6-9A6B-4695-9F2B-93D08BF1D8F7/14/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55A67845-9E93-46A1-85EA-2787EC9ACCAF/fa/45153c10/UserManager`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F81BF607-48CE-41ED-AEE9-43FA4E8DEE90/6B/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EndTerm/Models/Address.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Category.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/CategoryRepository.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/AdvertisementRepository.cs" />
@@ -25,22 +113,50 @@
         <option value="$PROJECT_DIR$/EndTerm/Repository/IAddressRepository.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Repository/IAdvertisementRepository.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Repository/ICategoryRepository.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Data/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Startup.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Address.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/City.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Favourites.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/FavoutitesItem.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/OblastRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/IOblastRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/ICityRepository - Copy.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/CityRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/IFavouritesItemRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/FavouritesItemRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/CategoryController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/IFavouritesRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Repository/Impl/FavouritesRepository.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/FavouritesController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Data/ApplicationDbContext.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Startup.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/appsettings.json" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1kYx2RRcydLizoggbj5N5lRS8tG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -96,138 +212,219 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605891119661</updated>
-      <workItem from="1605891135600" duration="2167000" />
+      <workItem from="1605891135600" duration="2445000" />
+      <workItem from="1605943319901" duration="5266000" />
+      <workItem from="1605952722238" duration="12886000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605891667000">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605945694836">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605891667000" />
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1605893247589">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605945694836" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605971259345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605893247589" />
-    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1605893247589">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605971259345" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605971259345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605893247589" />
-    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1605893247589">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605971259345" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605971259345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605893247589" />
-    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1605893247589">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605971259345" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605971259345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605893247589" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1605893284440">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605971259345" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1605971119252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605893284440" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1605893284440">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1605971119252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605893284440" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1605893284439">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1605971119252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605893284439" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1605893284440">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1605971119252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605893284440" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1605971119253">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605971119253" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1605971119252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1605971119252" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="48">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>74</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="74">
             <startOffsets>
-              <option value="1541" />
+              <option value="2866" />
             </startOffsets>
             <endOffsets>
-              <option value="1603" />
+              <option value="2961" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>49</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="49">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>75</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="75">
             <startOffsets>
-              <option value="1616" />
+              <option value="2976" />
             </startOffsets>
             <endOffsets>
-              <option value="1683" />
+              <option value="2999" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="51">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>76</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="76">
             <startOffsets>
-              <option value="1766" />
+              <option value="3018" />
             </startOffsets>
             <endOffsets>
-              <option value="1785" />
+              <option value="3102" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>78</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="78">
+            <startOffsets>
+              <option value="3120" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3377" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="52">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>84</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="83">
             <startOffsets>
-              <option value="1830" />
+              <option value="3392" />
             </startOffsets>
             <endOffsets>
-              <option value="1857" />
+              <option value="3487" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>53</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="53">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>86</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="85">
             <startOffsets>
-              <option value="1870" />
+              <option value="3543" />
             </startOffsets>
             <endOffsets>
-              <option value="1905" />
+              <option value="3669" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/MainController.cs</url>
-          <line>54</line>
-          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\MainController.cs" initialLine="54">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs</url>
+          <line>88</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AuthenticationController.cs" initialLine="87">
             <startOffsets>
-              <option value="1918" />
+              <option value="3687" />
             </startOffsets>
             <endOffsets>
-              <option value="1952" />
+              <option value="3727" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#System.Text.Json.JsonValueKind" memberName="value__" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

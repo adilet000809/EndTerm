@@ -1,15 +1,15 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace EndTerm.Models
 {
-    public class Address
+    public class Favourites
     {
         [Required]
         public int Id { get; set; }
-        [Display(Name = "Address")]
         [Required]
-        public string Oblast { get; set; }
+        public string UserId { get; set; }
         [Required]
-        public string City { get; set; }
+        public IdentityUser User { get; set; }
     }
 }

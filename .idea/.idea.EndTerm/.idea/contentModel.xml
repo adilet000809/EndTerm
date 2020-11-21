@@ -20,7 +20,12 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="api" t="Include">
-            <e p="MainController.cs" t="Include" />
+            <e p="AdvertisementController.cs" t="Include" />
+            <e p="AuthenticationController.cs" t="Include" />
+            <e p="CategoryController.cs" t="Include" />
+            <e p="CityController.cs" t="Include" />
+            <e p="FavouritesController.cs" t="Include" />
+            <e p="OblastController.cs" t="Include" />
           </e>
           <e p="HomeController.cs" t="Include" />
         </e>
@@ -31,15 +36,20 @@
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
             <e p="20201120165950_1st migration.cs" t="Include" />
             <e p="20201120165950_1st migration.Designer.cs" t="Include" />
+            <e p="20201121075657_2nd migration.cs" t="Include" />
+            <e p="20201121075657_2nd migration.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
         <e p="EndTerm.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
-          <e p="Address.cs" t="Include" />
           <e p="Advertisement.cs" t="Include" />
           <e p="Category.cs" t="Include" />
+          <e p="City.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="Favourites.cs" t="Include" />
+          <e p="FavouritesItem.cs" t="Include" />
+          <e p="Oblast.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -54,14 +64,20 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="repository" t="Include">
-          <e p="IAddressRepository.cs" t="Include" />
           <e p="IAdvertisementRepository.cs" t="Include" />
           <e p="ICategoryRepository.cs" t="Include" />
+          <e p="ICityRepository.cs" t="Include" />
+          <e p="IFavouritesItemRepository.cs" t="Include" />
+          <e p="IFavouritesRepository.cs" t="Include" />
           <e p="impl" t="Include">
-            <e p="AddressRepository.cs" t="Include" />
             <e p="AdvertisementRepository.cs" t="Include" />
             <e p="CategoryRepository.cs" t="Include" />
+            <e p="CityRepository.cs" t="Include" />
+            <e p="FavouritesItemRepository.cs" t="Include" />
+            <e p="FavouritesRepository.cs" t="Include" />
+            <e p="OblastRepository.cs" t="Include" />
           </e>
+          <e p="IOblastRepository.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">

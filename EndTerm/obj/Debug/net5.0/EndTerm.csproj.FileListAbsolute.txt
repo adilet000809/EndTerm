@@ -73,3 +73,10 @@ C:\Users\abola\RiderProjects\EndTerm\EndTerm\obj\Debug\net5.0\EndTerm.dll
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\obj\Debug\net5.0\ref\EndTerm.dll
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\obj\Debug\net5.0\EndTerm.pdb
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\obj\Debug\net5.0\EndTerm.genruntimeconfig.cache
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
