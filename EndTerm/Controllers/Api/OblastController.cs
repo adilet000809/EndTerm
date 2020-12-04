@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EndTerm.Controllers.Api
 {
+    
+    [Produces("application/json")]
     [ApiController]
-    [Produces(MediaTypeNames.Application.Json)]
     [Route("api/[controller]")]
     public class OblastController : Controller
     {
@@ -24,42 +25,69 @@ namespace EndTerm.Controllers.Api
             _userManager = userManager;
         }
         
+        /// <summary>
+        /// Fetch all oblasts
+        /// </summary>
+        /// <returns>List of oblasts</returns>
         [HttpGet("oblasts")]
         public IEnumerable<Oblast> GetAllOblasts()
         {
             return _oblastRepository.GetAllOblasts();
         }
         
+        /// <summary>
+        /// Fetch single oblast by id
+        /// </summary>
+        /// <param name="oblastsId"></param>
+        /// <returns></returns>
         [HttpGet("oblasts/{oblastsId}")]
-        public Oblast GetOblast(int oblastsId)
+        public IActionResult GetOblast(int oblastsId)
         {
-            return _oblastRepository.GetOblast(oblastsId);
+            var result = _oblastRepository.GetOblast(oblastsId);
+            if (result == null)
+            {
+                return NotFound("Oblast not found");
+            }
+
+            return Ok(result);
         }
         
+        /// <summary>
+        /// Add oblast into database
+        /// </summary>
+        /// <param name="oblast"></param>
+        /// <returns></returns>
         [HttpPost("oblasts/add")]
-        public Oblast AddOblast(JsonElement request)
+        public Oblast AddOblast(Oblast oblast)
         {
-            var oblastName = request.GetProperty("oblastName").GetString();
-            return _oblastRepository.Add(new Oblast {Name = oblastName});
+            return _oblastRepository.Add(new Oblast {Name = oblast.Name});
         }
         
-        [HttpPost("oblasts/update")]
-        public IActionResult UpdateOblast(JsonElement request)
+        /// <summary>
+        /// Update oblast 
+        /// </summary>
+        /// <param name="oblast"></param>
+        /// <returns></returns>
+        [HttpPut("oblasts/update")]
+        public IActionResult UpdateOblast(Oblast oblast)
         {
-            var oblastId = request.GetProperty("oblastId").GetInt32();
-            var oblastName = request.GetProperty("oblastName").GetString();
-            var result = _oblastRepository.GetOblast(oblastId);
-            if (result == null) return BadRequest("Not Found");
-            result.Name = oblastName;
+            var result = _oblastRepository.GetOblast(oblast.Id);
+            if (result == null) return NotFound("Not Found");
+            result.Name = oblast.Name;
             _oblastRepository.Update(result);
             return Ok("Updated successfully");
         }
         
+        /// <summary>
+        /// Delete oblast
+        /// </summary>
+        /// <param name="oblastsId"></param>
+        /// <returns></returns>
         [HttpDelete("oblasts/{oblastsId}")]
         public IActionResult DeleteOblast(int oblastsId)
         {
             var result = _oblastRepository.Delete(oblastsId);
-            if (result == null) return BadRequest("Item not found");  
+            if (result == null) return NotFound("Item not found");  
             return Ok("Deleted successfully");
         }
         

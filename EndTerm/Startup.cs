@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using EndTerm.Data;
+using EndTerm.Jwt;
 using EndTerm.Repository;
 using EndTerm.Repository.Impl;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace EndTerm
 {
@@ -44,31 +46,55 @@ namespace EndTerm
                 .AddEntityFrameworkStores<ApplicationDbContext>()  
                 .AddDefaultTokenProviders();
 
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>  
-            {  
-                options.SaveToken = true;  
-                options.RequireHttpsMetadata = false;  
-                options.TokenValidationParameters = new TokenValidationParameters()  
-                {  
-                    ValidateIssuer = true,
-                    ValidateAudience = true,  
-                    ValidAudience = Configuration["JWT:ValidAudience"],  
-                    ValidIssuer = Configuration["JWT:ValidIssuer"],  
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))  
-                };  
-            });
-            
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IOblastRepository, OblastRepository>();
             services.AddTransient<ICityRepository, CityRepository>();
             services.AddTransient<IFavouritesRepository, FavouritesRepository>();
             services.AddTransient<IFavouritesItemRepository, FavouritesItemRepository>();
             services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
+            services.AddTransient<UserService, UserService>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme {
+                    In = ParameterLocation.Header, 
+                    Description = "Please insert JWT with Bearer into field",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey 
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    { 
+                        new OpenApiSecurityScheme 
+                        { 
+                            Reference = new OpenApiReference 
+                            { 
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer" 
+                            } 
+                        },
+                        new string[] { } 
+                    } 
+                });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Endterm Project API",
+                    Description = "Endterm Project",
+                    TermsOfService = new Uri("https://github.com/jixad"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Adilet Bolatbek",
+                        Email = string.Empty,
+                        Url = new Uri("https://github.com/jixad"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "No License",
+                        Url = new Uri("https://github.com/jixad"),
+                    }
+                });
+            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,7 +119,14 @@ namespace EndTerm
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Endterm Project .Net");
+                c.RoutePrefix = string.Empty;
+            });
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -101,6 +134,9 @@ namespace EndTerm
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            app.UseMiddleware<JwtMiddleware>();
+
         }
     }
 }

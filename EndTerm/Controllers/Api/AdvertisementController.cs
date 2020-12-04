@@ -1,16 +1,20 @@
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Net.Mime;
 using System.Text.Json;
 using System.Threading.Tasks;
 using EndTerm.Models;
+using EndTerm.Models.Request;
 using EndTerm.Repository;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EndTerm.Controllers.Api
 {
+    [Produces("application/json")]
     [ApiController]
-    [Produces(MediaTypeNames.Application.Json)]
     [Route("api/[controller]")]
     public class AdvertisementController : Controller
     {
@@ -30,39 +34,51 @@ namespace EndTerm.Controllers.Api
             _userManager = userManager;
         }
         
-        private Task<IdentityUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
-        
+        /// <summary>
+        /// Fetch all advertisements
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("advertisements")]
         public IEnumerable<Advertisement> GetAllAdvertisements()
         {
             return _advertisementRepository.GetAllAdvertisement();
         }
         
+        /// <summary>
+        /// Fetch single advertisement by id
+        /// </summary>
+        /// <param name="advertisementId"></param>
+        /// <returns></returns>
         [HttpGet("advertisements/{advertisementId}")]
-        public Advertisement GetAdvertisement(int advertisementId)
+        public IActionResult GetAdvertisement(int advertisementId)
         {
-            return _advertisementRepository.GetAdvertisement(advertisementId);
+            var result = _advertisementRepository.GetAdvertisement(advertisementId);
+            if (result == null) return NotFound("Advertisement not found");
+            return Ok(result);
         }
         
+        /// <summary>
+        /// Add advertisement into database
+        /// </summary>
+        /// <param name="advertisementRequest"></param>
+        /// <returns></returns>
+        [Authorize]
         [HttpPost("advertisements/add")]
-        public IActionResult AddAdvertisement(JsonElement request)
+        public IActionResult AddAdvertisement(AdvertisementRequest advertisementRequest)
         {
-            var advertisementName = request.GetProperty("advertisementName").GetString();
-            var advertisementImage = request.GetProperty("advertisementImage").GetString();
-            var advertisementDescription = request.GetProperty("advertisementDescription").GetString();
-            var categoryId = request.GetProperty("categoryId").GetInt32();
-            var category = _categoryRepository.GetCategory(categoryId);
-            var oblastId = request.GetProperty("oblastId").GetInt32();
-            var oblast = _oblastRepository.GetOblast(oblastId);
-            var cityId = request.GetProperty("cityId").GetInt32();
-            var city = _cityRepository.GetCity(cityId);
+            var category = _categoryRepository.GetCategory(advertisementRequest.CategoryId);
+            if (category == null) return NotFound("Category not found");
+            var oblast = _oblastRepository.GetOblast(advertisementRequest.OblastId);
+            if (oblast == null) return NotFound("Oblast not found");
+            var city = _cityRepository.GetCity(advertisementRequest.CityId);
+            if (city == null) return NotFound("City not found");
             var advertisement = new Advertisement
             {
-                Name = advertisementName,
-                Image = advertisementImage,
-                Description = advertisementDescription,
+                Name = advertisementRequest.Name,
+                Image = advertisementRequest.Image,
+                Description = advertisementRequest.Description,
                 Category = category,
-                CategoryId = categoryId,
+                CategoryId = category.Id,
                 Oblast = oblast,
                 OblastId = oblast.Id,
                 City = city,

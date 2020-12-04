@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 
 namespace EndTerm.Models
@@ -7,7 +8,7 @@ namespace EndTerm.Models
     {
         [Required]
         public int Id { get; set; }
-        [Display(Name = "Product")]
+        [Display(Name = "Advertisement")]
         [Required]
         public string Name { get; set; }
         [Required]
@@ -17,18 +18,22 @@ namespace EndTerm.Models
         [Required]
         public int CategoryId { get; set; }
         [Required]
+        [JsonIgnore]
         public Category Category { get; set; }
         [Required]
         public int OblastId { get; set; }
         [Required]
+        [JsonIgnore]
         public Oblast Oblast { get; set; }
         [Required]
         public int CityId { get; set; }
         [Required]
+        [JsonIgnore]
         public City City { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         [Required]
+        [JsonIgnore]
         public IdentityUser User { get; set; }
     }
 }

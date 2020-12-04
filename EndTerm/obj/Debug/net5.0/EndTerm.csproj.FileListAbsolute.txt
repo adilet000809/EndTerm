@@ -80,3 +80,7 @@ C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.Identity
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\abola\RiderProjects\EndTerm\EndTerm\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll

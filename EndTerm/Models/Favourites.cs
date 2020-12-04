@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 
 namespace EndTerm.Models
@@ -10,6 +11,7 @@ namespace EndTerm.Models
         [Required]
         public string UserId { get; set; }
         [Required]
+        [JsonIgnore]
         public IdentityUser User { get; set; }
     }
 }

@@ -1,19 +1,14 @@
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
-namespace EndTerm.Models
+namespace EndTerm.Models.Request
 {
-    public class City
+    public class CityRequest
     {
         [Required]
         public int Id { get; set; }
-        [Display(Name = "City")]
         [Required]
         public string Name { get; set; }
         [Required]
         public int OblastId { get; set; }
-        [Required]
-        [JsonIgnore]
-        public Oblast Oblast { get; set; }
     }
 }

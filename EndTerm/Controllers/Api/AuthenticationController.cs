@@ -5,88 +5,74 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using EndTerm.Jwt;
+using EndTerm.Models.Request;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 namespace EndTerm.Controllers.Api
 {
+    [Produces("application/json")]
     [ApiController] 
     [Route("api/[controller]")]
     public class AuthenticationController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;  
         private readonly IConfiguration _configuration;
+        private UserService _userService;
 
         public AuthenticationController(
             UserManager<IdentityUser> userManager, 
-            IConfiguration configuration)
+            IConfiguration configuration, UserService userService)
         {
             this._userManager = userManager;
             _configuration = configuration;
+            _userService = userService;
         }
         
+        /// <summary>
+        /// Authentication endpoint
+        /// </summary>
+        /// <param name="authRequest"></param>
+        /// <returns></returns>
         [HttpPost]  
         [Route("login")]  
-        public async Task<IActionResult> Login(JsonElement request)  
-        {  
-            var user = await _userManager.FindByEmailAsync(request.GetProperty("email").GetString());  
-            if (user != null && await _userManager.CheckPasswordAsync(user, request.GetProperty("password").GetString()))  
-            {  
-                // var userRoles = await _userManager.GetRolesAsync(user);  
-                //
-                // var authClaims = new List<Claim>  
-                // {  
-                //     new Claim(ClaimTypes.Name, user.UserName),  
-                //     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                // };  
-                //
-                // foreach (var userRole in userRoles)  
-                // {  
-                //     authClaims.Add(new Claim(ClaimTypes.Role, userRole));  
-                // }  
-  
-                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));  
-  
-                var token = new JwtSecurityToken(  
-                    issuer: _configuration["JWT:ValidIssuer"],  
-                    audience: _configuration["JWT:ValidAudience"],  
-                    expires: DateTime.Now.AddHours(3),  
-                    //claims: authClaims,  
-                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)  
-                );  
-  
-                return Ok(new  
-                {  
-                    token = new JwtSecurityTokenHandler().WriteToken(token),  
-                    expiration = token.ValidTo  
-                });  
-            }  
-            return Unauthorized();  
+        public async Task<IActionResult> Login(AuthRequest authRequest)
+        {
+            var response = _userService.Authenticate(authRequest).Result;
+            if (response == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
+            return Ok(response);
         }  
         
+        /// <summary>
+        /// Registration endpoint
+        /// </summary>
+        /// <param name="registerRequest"></param>
+        /// <returns></returns>
         [HttpPost]  
         [Route("register")]  
-        public async Task<IActionResult> Register(JsonElement request)
+        public async Task<IActionResult> Register(RegisterRequest registerRequest)
         {
-            var userExists = await _userManager.FindByEmailAsync(request.GetProperty("email").GetString());  
-            if (userExists != null)  
-                return StatusCode(StatusCodes.Status500InternalServerError, "User already exists!");  
+            var emailExists = await _userManager.FindByEmailAsync(registerRequest.Email);  
+            var userNameExists = await _userManager.FindByNameAsync(registerRequest.Username);  
+            if (emailExists != null)  
+                return StatusCode(StatusCodes.Status400BadRequest, "Email already registered!");  
+            if (userNameExists != null)  
+                return StatusCode(StatusCodes.Status400BadRequest, "Username is not available!");
   
             var user = new IdentityUser()  
             {  
-                Email = request.GetProperty("email").GetString(),  
+                Email = registerRequest.Email,  
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = request.GetProperty("email").GetString()
+                UserName = registerRequest.Username,
+                
             };  
-            var result = await _userManager.CreateAsync(user, request.GetProperty("password").GetString());  
-            if (!result.Succeeded)  
-                return StatusCode(StatusCodes.Status500InternalServerError, "User creation failed! Please check user details and try again.");  
-  
-            return Ok("User created successfully!");  
+            var result = await _userManager.CreateAsync(user, registerRequest.Password);  
+            return !result.Succeeded ? StatusCode(StatusCodes.Status500InternalServerError, "User creation failed! Please check user details and try again.") : Ok("User created successfully!");
         }
         
     }

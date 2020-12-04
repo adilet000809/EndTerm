@@ -42,6 +42,11 @@
           </e>
         </e>
         <e p="EndTerm.csproj" t="IncludeRecursive" />
+        <e p="Jwt" t="Include">
+          <e p="AuthorizeAttribute.cs" t="Include" />
+          <e p="JwtMiddleware.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Advertisement.cs" t="Include" />
           <e p="Category.cs" t="Include" />
@@ -50,6 +55,13 @@
           <e p="Favourites.cs" t="Include" />
           <e p="FavouritesItem.cs" t="Include" />
           <e p="Oblast.cs" t="Include" />
+          <e p="Request" t="Include">
+            <e p="AdvertisementRequest.cs" t="Include" />
+            <e p="AuthRequest.cs" t="Include" />
+            <e p="AuthResponse.cs" t="Include" />
+            <e p="CityRequest.cs" t="Include" />
+            <e p="RegisterRequest.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
