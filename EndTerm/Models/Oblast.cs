@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EndTerm.Models
@@ -9,5 +10,7 @@ namespace EndTerm.Models
         [Display(Name = "Oblast")]
         [Required]
         public string Name { get; set; }
+
+        public List<Advertisement> Advertisements { get; set; }
     }
 }

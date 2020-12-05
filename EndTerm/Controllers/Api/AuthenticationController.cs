@@ -22,32 +22,39 @@ namespace EndTerm.Controllers.Api
     {
         private readonly UserManager<IdentityUser> _userManager;  
         private readonly IConfiguration _configuration;
-        private UserService _userService;
 
         public AuthenticationController(
             UserManager<IdentityUser> userManager, 
-            IConfiguration configuration, UserService userService)
+            IConfiguration configuration)
         {
             this._userManager = userManager;
             _configuration = configuration;
-            _userService = userService;
         }
-        
+
         /// <summary>
         /// Authentication endpoint
         /// </summary>
         /// <param name="authRequest"></param>
         /// <returns></returns>
-        [HttpPost]  
-        [Route("login")]  
-        public async Task<IActionResult> Login(AuthRequest authRequest)
+        [HttpPost]
+        [Route("login")]
+        public IActionResult Login(AuthRequest authRequest)
         {
-            var response = _userService.Authenticate(authRequest).Result;
-            if (response == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
-            return Ok(response);
-        }  
-        
+            IActionResult response = Unauthorized();
+            var user = AuthenticateUser(authRequest);
+            if (user != null)
+            {
+                var token = GenerateJWTToken(authRequest);
+                response = Ok(new
+                {
+                    token = token,
+                    email = authRequest.Email
+                });
+            }
+
+            return response;
+        }
+
         /// <summary>
         /// Registration endpoint
         /// </summary>
@@ -74,6 +81,34 @@ namespace EndTerm.Controllers.Api
             var result = await _userManager.CreateAsync(user, registerRequest.Password);  
             return !result.Succeeded ? StatusCode(StatusCodes.Status500InternalServerError, "User creation failed! Please check user details and try again.") : Ok("User created successfully!");
         }
+        
+        string GenerateJWTToken(AuthRequest authRequest)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Email, authRequest.Email)
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(60),
+                signingCredentials: credentials
+            );
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }    
+    
+        private IdentityUser AuthenticateUser(AuthRequest authRequest)
+        {
+            var user = _userManager.FindByEmailAsync(authRequest.Email).Result;
+            if (user == null) return null;
+            if (!_userManager.CheckPasswordAsync(user, authRequest.Password).Result) return null;
+            return user;
+        }    
         
     }
 }

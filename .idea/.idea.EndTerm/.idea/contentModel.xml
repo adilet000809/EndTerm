@@ -38,14 +38,14 @@
             <e p="20201120165950_1st migration.Designer.cs" t="Include" />
             <e p="20201121075657_2nd migration.cs" t="Include" />
             <e p="20201121075657_2nd migration.Designer.cs" t="Include" />
+            <e p="20201205064155_Many2One fixed.cs" t="Include" />
+            <e p="20201205064155_Many2One fixed.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
         <e p="EndTerm.csproj" t="IncludeRecursive" />
         <e p="Jwt" t="Include">
-          <e p="AuthorizeAttribute.cs" t="Include" />
-          <e p="JwtMiddleware.cs" t="Include" />
-          <e p="UserService.cs" t="Include" />
+          <e p="AuthOptions.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Advertisement.cs" t="Include" />

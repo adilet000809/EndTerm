@@ -14,6 +14,7 @@ using EndTerm.Jwt;
 using EndTerm.Repository;
 using EndTerm.Repository.Impl;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -52,7 +53,26 @@ namespace EndTerm
             services.AddTransient<IFavouritesRepository, FavouritesRepository>();
             services.AddTransient<IFavouritesItemRepository, FavouritesItemRepository>();
             services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
-            services.AddTransient<UserService, UserService>();
+            
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = Configuration["Jwt:Issuer"],
+                        ValidAudience = Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SecretKey"])),
+                        ClockSkew = TimeSpan.Zero
+                    };
+
+                });
+            services.AddAuthorization();
 
             services.AddSwaggerGen(c =>
             {
@@ -94,7 +114,7 @@ namespace EndTerm
                     }
                 });
             });
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -119,6 +139,7 @@ namespace EndTerm
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCors();
             
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -134,8 +155,6 @@ namespace EndTerm
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-
-            app.UseMiddleware<JwtMiddleware>();
 
         }
     }

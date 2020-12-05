@@ -18,22 +18,18 @@ namespace EndTerm.Models
         [Required]
         public int CategoryId { get; set; }
         [Required]
-        [JsonIgnore]
         public Category Category { get; set; }
         [Required]
         public int OblastId { get; set; }
         [Required]
-        [JsonIgnore]
         public Oblast Oblast { get; set; }
         [Required]
         public int CityId { get; set; }
         [Required]
-        [JsonIgnore]
         public City City { get; set; }
         [Required]
         public string UserId { get; set; }
         [Required]
-        [JsonIgnore]
         public IdentityUser User { get; set; }
     }
 }

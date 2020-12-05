@@ -11,7 +11,6 @@ namespace EndTerm.Models
         [Required]
         public string UserId { get; set; }
         [Required]
-        [JsonIgnore]
         public IdentityUser User { get; set; }
     }
 }

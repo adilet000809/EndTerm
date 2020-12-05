@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
@@ -13,7 +14,8 @@ namespace EndTerm.Models
         [Required]
         public int OblastId { get; set; }
         [Required]
-        [JsonIgnore]
         public Oblast Oblast { get; set; }
+        
+        public List<Advertisement> Advertisements { get; set; }
     }
 }

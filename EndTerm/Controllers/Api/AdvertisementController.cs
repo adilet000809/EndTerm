@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Mime;
 using System.Text.Json;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using EndTerm.Models;
 using EndTerm.Models.Request;
 using EndTerm.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -38,9 +40,16 @@ namespace EndTerm.Controllers.Api
         /// Fetch all advertisements
         /// </summary>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+        JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("advertisements")]
         public IEnumerable<Advertisement> GetAllAdvertisements()
         {
+            var a = User.Claims.First().Value;
+            if (User.Identity != null)
+            {
+                var b = User.Identity.Name;
+            }
             return _advertisementRepository.GetAllAdvertisement();
         }
         
@@ -62,10 +71,13 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="advertisementRequest"></param>
         /// <returns></returns>
-        [Authorize]
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost("advertisements/add")]
         public IActionResult AddAdvertisement(AdvertisementRequest advertisementRequest)
         {
+            var userEmail = User.Claims.First().Value;
+            var user = _userManager.FindByEmailAsync(userEmail).Result;
             var category = _categoryRepository.GetCategory(advertisementRequest.CategoryId);
             if (category == null) return NotFound("Category not found");
             var oblast = _oblastRepository.GetOblast(advertisementRequest.OblastId);
@@ -82,7 +94,9 @@ namespace EndTerm.Controllers.Api
                 Oblast = oblast,
                 OblastId = oblast.Id,
                 City = city,
-                CityId = city.Id
+                CityId = city.Id,
+                User = user,
+                UserId = user.Id
             };
             _advertisementRepository.Add(advertisement);
             return Ok("Created successfully");
