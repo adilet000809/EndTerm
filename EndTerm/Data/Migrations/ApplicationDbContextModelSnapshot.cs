@@ -349,13 +349,13 @@ namespace EndTerm.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("EndTerm.Models.City", "City")
-                        .WithMany("Advertisements")
+                        .WithMany()
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EndTerm.Models.Oblast", "Oblast")
-                        .WithMany("Advertisements")
+                        .WithMany()
                         .HasForeignKey("OblastId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -378,7 +378,7 @@ namespace EndTerm.Data.Migrations
             modelBuilder.Entity("EndTerm.Models.City", b =>
                 {
                     b.HasOne("EndTerm.Models.Oblast", "Oblast")
-                        .WithMany()
+                        .WithMany("Cities")
                         .HasForeignKey("OblastId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -467,14 +467,9 @@ namespace EndTerm.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("EndTerm.Models.City", b =>
-                {
-                    b.Navigation("Advertisements");
-                });
-
             modelBuilder.Entity("EndTerm.Models.Oblast", b =>
                 {
-                    b.Navigation("Advertisements");
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }

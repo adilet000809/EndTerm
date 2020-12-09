@@ -16,15 +16,12 @@ namespace EndTerm.Controllers.Api
     {
         private readonly IOblastRepository _oblastRepository;
         private readonly ICityRepository _cityRepository;
-        private readonly UserManager<IdentityUser> _userManager;
 
         public CityController(
             ICityRepository cityRepository, 
-            UserManager<IdentityUser> userManager, 
             IOblastRepository oblastRepository)
         {
             _cityRepository = cityRepository;
-            _userManager = userManager;
             _oblastRepository = oblastRepository;
         }
         

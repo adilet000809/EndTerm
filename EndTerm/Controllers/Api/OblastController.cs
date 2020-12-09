@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net.Mime;
 using System.Text.Json;
 using EndTerm.Models;
+using EndTerm.Models.Request;
 using EndTerm.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,14 +16,11 @@ namespace EndTerm.Controllers.Api
     public class OblastController : Controller
     {
         private readonly IOblastRepository _oblastRepository;
-        private readonly UserManager<IdentityUser> _userManager;
 
         public OblastController(
-            IOblastRepository oblastRepository, 
-            UserManager<IdentityUser> userManager)
+            IOblastRepository oblastRepository)
         {
             _oblastRepository = oblastRepository;
-            _userManager = userManager;
         }
         
         /// <summary>
@@ -58,7 +56,7 @@ namespace EndTerm.Controllers.Api
         /// <param name="oblast"></param>
         /// <returns></returns>
         [HttpPost("oblasts/add")]
-        public Oblast AddOblast(Oblast oblast)
+        public Oblast AddOblast(OblastRequest oblast)
         {
             return _oblastRepository.Add(new Oblast {Name = oblast.Name});
         }
