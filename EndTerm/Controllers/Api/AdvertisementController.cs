@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Mime;
@@ -98,8 +99,18 @@ namespace EndTerm.Controllers.Api
                 User = user,
                 UserId = user.Id
             };
-            _advertisementRepository.Add(advertisement);
-            return Ok("Created successfully");
+            var results = new List<ValidationResult>();
+            var context = new ValidationContext(advertisement);
+            if (!Validator.TryValidateObject(advertisement, context, results, true))
+            {
+                return BadRequest(results);
+            }
+            else
+            {
+                _advertisementRepository.Add(advertisement);
+                return Ok("Created successfully");
+            }
+            
         }
     }
 }

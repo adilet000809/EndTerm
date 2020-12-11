@@ -16,6 +16,6 @@ namespace EndTerm.Models
         [Required]
         public Oblast Oblast { get; set; }
         
-        public List<Advertisement> Advertisements { get; set; }
+        //public List<Advertisement> Advertisements { get; set; }
     }
 }

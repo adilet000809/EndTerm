@@ -25,31 +25,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a807c185-87cf-4532-9ed6-d1b09a7def83" name="Default Changelist" comment="MileStone3. Swagger">
-      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201205064155_Many2One fixed.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201205064155_Many2One fixed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EndTerm/Jwt/AuthOptions.cs" afterDir="false" />
+    <list default="true" id="a807c185-87cf-4532-9ed6-d1b09a7def83" name="Default Changelist" comment="Milestone3 Jwt Authentication fixed">
+      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201208120605_CityOblastOnetoMany.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/20201208120605_CityOblastOnetoMany.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EndTerm/Models/Request/OblastRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndTerm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Jwt/AuthorizeAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Jwt/JwtMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Jwt/UserService.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/Models/City.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/City.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Models/Favourites.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/Favourites.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/EndTerm.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/ref/EndTerm.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/bin/Debug/net5.0/ref/EndTerm.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EndTerm/obj/Debug/net5.0/EndTerm.Views.pdb" afterDir="false" />
@@ -101,23 +96,24 @@
         <option value="$PROJECT_DIR$/EndTerm/Models/Request/AuthRequest.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Request/RegisterRequest.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/CategoryController.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Request/CityRequest.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Request/AdvertisementRequest.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Jwt/AuthorizeAttribute.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Request/AuthResponse.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Jwt/JwtMiddleware.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Jwt/UserService.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" />
-        <option value="$PROJECT_DIR$/EndTerm/Models/City.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Models/Favourites.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Jwt/AuthOptions.cs" />
         <option value="$PROJECT_DIR$/EndTerm/appsettings.json" />
         <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/AuthenticationController.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Startup.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/City.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Request/OblastRequest.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Oblast.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/FavouritesItem.cs" />
+        <option value="$PROJECT_DIR$/EndTerm/Models/Advertisement.cs" />
         <option value="$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs" />
       </list>
     </option>
@@ -198,7 +194,9 @@
       <workItem from="1605952722238" duration="13346000" />
       <workItem from="1606066754231" duration="132000" />
       <workItem from="1607087551453" duration="13447000" />
-      <workItem from="1607150094397" duration="8114000" />
+      <workItem from="1607150094397" duration="8225000" />
+      <workItem from="1607428833547" duration="1751000" />
+      <workItem from="1607692111059" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="MILESTONE 1,  JWT Auth, Registration, Models migration">
       <created>1605971492422</created>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607101224901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Milestone3 Jwt Authentication fixed">
+      <created>1607158366275</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607158366275</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,97 +244,106 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="MILESTONE 1,  JWT Auth, Registration, Models migration" />
     <MESSAGE value="MileStone3. Swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="MileStone3. Swagger" />
+    <MESSAGE value="Milestone3 Jwt Authentication fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Milestone3 Jwt Authentication fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607087852229">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607087852229" />
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1607158126903">
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1607432144397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1607158126903" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607101231144">
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1607432144397" />
+    <state x="479" y="91" key="RiderGenerateDialog" timestamp="1607430131076">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607101231144" />
+    <state x="479" y="91" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1607430131076" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607158370267">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607158370267" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1607429618238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1607429618238" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607154527432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -340,52 +354,52 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs</url>
-          <line>48</line>
+          <line>49</line>
           <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AdvertisementController.cs" initialLine="43">
             <startOffsets>
-              <option value="1845" />
+              <option value="1890" />
             </startOffsets>
             <endOffsets>
-              <option value="1871" />
+              <option value="1916" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs</url>
-          <line>49</line>
+          <line>50</line>
           <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AdvertisementController.cs" initialLine="44">
             <startOffsets>
-              <option value="1884" />
+              <option value="1929" />
             </startOffsets>
             <endOffsets>
-              <option value="1885" />
+              <option value="1930" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs</url>
-          <line>50</line>
+          <line>51</line>
           <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AdvertisementController.cs" initialLine="45">
             <startOffsets>
-              <option value="1902" />
+              <option value="1947" />
             </startOffsets>
             <endOffsets>
-              <option value="1929" />
+              <option value="1974" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs</url>
-          <line>52</line>
+          <line>53</line>
           <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AdvertisementController.cs" initialLine="47">
             <startOffsets>
-              <option value="1956" />
+              <option value="2001" />
             </startOffsets>
             <endOffsets>
-              <option value="2010" />
+              <option value="2055" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
@@ -470,16 +484,161 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/AdvertisementController.cs</url>
-          <line>47</line>
+          <line>48</line>
           <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\AdvertisementController.cs" initialLine="46">
             <startOffsets>
-              <option value="1798" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="1798" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="63">
+            <startOffsets>
+              <option value="1988" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2039" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="62">
+            <startOffsets>
+              <option value="1943" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1975" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="64">
+            <startOffsets>
+              <option value="2052" />
+              <option value="2072" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2071" />
+              <option value="2108" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>72</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="65">
+            <startOffsets>
+              <option value="2321" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2347" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>74</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="66">
+            <startOffsets>
+              <option value="2406" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2430" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>61</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="61">
+            <startOffsets>
+              <option value="1894" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1930" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/OblastController.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\OblastController.cs" initialLine="62">
+            <startOffsets>
+              <option value="1835" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1897" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="37">
+            <startOffsets>
+              <option value="1134" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1172" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="73">
+            <startOffsets>
+              <option value="2360" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2393" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>65</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="65">
+            <startOffsets>
+              <option value="2121" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2271" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EndTerm/Controllers/Api/CityController.cs</url>
+          <line>71</line>
+          <properties documentPath="C:\Users\abola\RiderProjects\EndTerm\EndTerm\Controllers\Api\CityController.cs" initialLine="71">
+            <startOffsets>
+              <option value="2284" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2308" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

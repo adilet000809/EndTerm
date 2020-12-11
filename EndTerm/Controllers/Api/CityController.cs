@@ -63,7 +63,15 @@ namespace EndTerm.Controllers.Api
             var cityName = cityRequest.Name;
             var oblast = _oblastRepository.GetOblast(oblastId);
             if (oblast == null) return NotFound("Oblast Not Found");
-            _cityRepository.Add(new City { Name = cityName, OblastId = oblastId, Oblast = oblast});
+            var city = new City
+            {
+                Name = cityName,
+                OblastId = oblastId,
+                Oblast = oblast
+            };
+            oblast.Cities.Add(city);
+            _cityRepository.Add(city);
+            _oblastRepository.Update(oblast);
             return Ok("Successful");
         }
         

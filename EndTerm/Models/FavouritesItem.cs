@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
@@ -15,5 +16,6 @@ namespace EndTerm.Models
         public int FavouritesId { get; set; }
         [Required]
         public Favourites Favourites { get; set; }
+        
     }
 }

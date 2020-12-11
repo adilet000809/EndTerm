@@ -40,6 +40,8 @@
             <e p="20201121075657_2nd migration.Designer.cs" t="Include" />
             <e p="20201205064155_Many2One fixed.cs" t="Include" />
             <e p="20201205064155_Many2One fixed.Designer.cs" t="Include" />
+            <e p="20201208120605_CityOblastOnetoMany.cs" t="Include" />
+            <e p="20201208120605_CityOblastOnetoMany.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
@@ -60,6 +62,7 @@
             <e p="AuthRequest.cs" t="Include" />
             <e p="AuthResponse.cs" t="Include" />
             <e p="CityRequest.cs" t="Include" />
+            <e p="OblastRequest.cs" t="Include" />
             <e p="RegisterRequest.cs" t="Include" />
           </e>
         </e>
