@@ -16,14 +16,11 @@ namespace EndTerm.Controllers.Api
     public class OblastController : Controller
     {
         private readonly IOblastRepository _oblastRepository;
-        private readonly UserManager<IdentityUser> _userManager;
 
         public OblastController(
-            IOblastRepository oblastRepository, 
-            UserManager<IdentityUser> userManager)
+            IOblastRepository oblastRepository)
         {
             _oblastRepository = oblastRepository;
-            _userManager = userManager;
         }
         
         /// <summary>

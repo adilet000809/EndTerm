@@ -14,14 +14,11 @@ namespace EndTerm.Controllers.Api
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryRepository _categoryRepository;
-        private readonly UserManager<IdentityUser> _userManager;
 
         public CategoryController(
-            ICategoryRepository categoryRepository, 
-            UserManager<IdentityUser> userManager)
+            ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
-            _userManager = userManager;
         }
 
         /// <summary>
@@ -43,14 +40,8 @@ namespace EndTerm.Controllers.Api
         public IActionResult GetCategory(int categoryId)
         {
             var category = _categoryRepository.GetCategory(categoryId);
-            if (category != null)
-            {
-                return Ok(category);
-            }
-
-            {
-                return NotFound("Category not found");
-            }
+            if (category == null) return NotFound("Category not found");
+            return Ok(category);
         }
         
         /// <summary>

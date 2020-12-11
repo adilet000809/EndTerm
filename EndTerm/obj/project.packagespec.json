@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\abola\\RiderProjects\\EndTerm\\EndTerm\\EndTerm.csproj",
+    "projectUniqueName": "C:\\Users\\admin\\RiderProjects\\EndTerm\\EndTerm\\EndTerm.csproj",
     "projectName": "EndTerm",
-    "projectPath": "C:\\Users\\abola\\RiderProjects\\EndTerm\\EndTerm\\EndTerm.csproj",
-    "outputPath": "C:\\Users\\abola\\RiderProjects\\EndTerm\\EndTerm\\obj\\",
+    "projectPath": "C:\\Users\\admin\\RiderProjects\\EndTerm\\EndTerm\\EndTerm.csproj",
+    "outputPath": "C:\\Users\\admin\\RiderProjects\\EndTerm\\EndTerm\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "net50"
@@ -53,6 +53,14 @@
         "Microsoft.EntityFrameworkCore.Tools": {
           "target": "Package",
           "version": "[5.0.0, )"
+        },
+        "Moq": {
+          "target": "Package",
+          "version": "[4.15.2, )"
+        },
+        "NUnit": {
+          "target": "Package",
+          "version": "[3.12.0, )"
         },
         "Swashbuckle.AspNetCore": {
           "target": "Package",
