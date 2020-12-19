@@ -4,6 +4,8 @@ using System.Text.Json;
 using EndTerm.Models;
 using EndTerm.Models.Request;
 using EndTerm.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,6 +55,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="cityRequest"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost("cities/add")]
         public IActionResult AddCity(CityRequest cityRequest)
         {
@@ -77,6 +81,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="cityRequest"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("cities/update")]
         public IActionResult UpdateCity(CityRequest cityRequest)
         {
@@ -96,6 +102,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="cityId"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpDelete("cities/{cityId}")]
         public IActionResult DeleteCity(int cityId)
         {

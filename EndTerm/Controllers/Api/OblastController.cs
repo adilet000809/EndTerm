@@ -4,6 +4,8 @@ using System.Text.Json;
 using EndTerm.Models;
 using EndTerm.Models.Request;
 using EndTerm.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,6 +57,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="oblast"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost("oblasts/add")]
         public Oblast AddOblast(OblastRequest oblast)
         {
@@ -66,6 +70,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="oblast"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("oblasts/update")]
         public IActionResult UpdateOblast(Oblast oblast)
         {
@@ -81,6 +87,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="oblastsId"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpDelete("oblasts/{oblastsId}")]
         public IActionResult DeleteOblast(int oblastsId)
         {

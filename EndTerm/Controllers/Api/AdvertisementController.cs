@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Mime;
+using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
 using EndTerm.Models;
@@ -41,16 +42,9 @@ namespace EndTerm.Controllers.Api
         /// Fetch all advertisements
         /// </summary>
         /// <returns></returns>
-        [Authorize(AuthenticationSchemes = 
-        JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("advertisements")]
         public IEnumerable<Advertisement> GetAllAdvertisements()
         {
-            var a = User.Claims.First().Value;
-            if (User.Identity != null)
-            {
-                var b = User.Identity.Name;
-            }
             return _advertisementRepository.GetAllAdvertisement();
         }
         
@@ -77,6 +71,11 @@ namespace EndTerm.Controllers.Api
         [HttpPost("advertisements/add")]
         public IActionResult AddAdvertisement(AdvertisementRequest advertisementRequest)
         {
+            var a = User.Identity;
+            if (User.Identity != null)
+            {
+                var b = User.Identity.Name;
+            }
             var userEmail = User.Claims.First().Value;
             var user = _userManager.FindByEmailAsync(userEmail).Result;
             var category = _categoryRepository.GetCategory(advertisementRequest.CategoryId);
@@ -105,12 +104,8 @@ namespace EndTerm.Controllers.Api
             {
                 return BadRequest(results);
             }
-            else
-            {
-                _advertisementRepository.Add(advertisement);
-                return Ok("Created successfully");
-            }
-            
+            _advertisementRepository.Add(advertisement);
+            return Ok("Created successfully");
         }
     }
 }

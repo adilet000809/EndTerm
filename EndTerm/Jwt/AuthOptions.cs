@@ -8,7 +8,7 @@ namespace EndTerm.Jwt
         public const string ISSUER = "localhoast:5001";
         public const string AUDIENCE = "User"; 
         const string KEY = "AdiletBolatbek26386endtermproject";  
-        public const int LIFETIME = 60; 
+        public const int LIFETIME = 60*60*24; 
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
         {
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(KEY));

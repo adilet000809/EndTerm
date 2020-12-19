@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\abola\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\abola\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_EndTerm.441402674.00" t="ExcludeRecursive" />
-    <e p="C:\Users\abola\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\abola\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\abola\RiderProjects\EndTerm" t="IncludeFlat">
+    <e p="C:\Users\admin\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\admin\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\admin\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\admin\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="C:\Users\admin\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\admin\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_EndTerm.-1847006434.00" t="ExcludeRecursive" />
+    <e p="C:\Users\admin\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\admin\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\admin\RiderProjects\EndTerm" t="IncludeFlat">
       <e p="EndTerm" t="IncludeRecursive">
         <e p="app.db" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
@@ -34,12 +42,10 @@
           <e p="Migrations" t="Include">
             <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
-            <e p="20201120165950_1st migration.cs" t="Include" />
-            <e p="20201120165950_1st migration.Designer.cs" t="Include" />
-            <e p="20201121075657_2nd migration.cs" t="Include" />
-            <e p="20201121075657_2nd migration.Designer.cs" t="Include" />
-            <e p="20201205064155_Many2One fixed.cs" t="Include" />
-            <e p="20201205064155_Many2One fixed.Designer.cs" t="Include" />
+            <e p="20201207092106_Initial migrations.cs" t="Include" />
+            <e p="20201207092106_Initial migrations.Designer.cs" t="Include" />
+            <e p="20201207094011_City.cs" t="Include" />
+            <e p="20201207094011_City.Designer.cs" t="Include" />
             <e p="20201208120605_CityOblastOnetoMany.cs" t="Include" />
             <e p="20201208120605_CityOblastOnetoMany.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
@@ -62,6 +68,7 @@
             <e p="AuthRequest.cs" t="Include" />
             <e p="AuthResponse.cs" t="Include" />
             <e p="CityRequest.cs" t="Include" />
+            <e p="FavouriteitemRequest.cs" t="Include" />
             <e p="OblastRequest.cs" t="Include" />
             <e p="RegisterRequest.cs" t="Include" />
           </e>
@@ -173,6 +180,20 @@
         </e>
       </e>
       <e p="EndTerm.sln" t="IncludeFlat" />
+      <e p="EndTermUnitTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CategorycontrollerTest.cs" t="Include" />
+        <e p="CityControllerTest.cs" t="Include" />
+        <e p="EndTermUnitTest.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="EndTermUnitTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OblastControllerTestcs.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

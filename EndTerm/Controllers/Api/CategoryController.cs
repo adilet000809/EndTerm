@@ -3,6 +3,8 @@ using System.Net.Mime;
 using System.Text.Json;
 using EndTerm.Models;
 using EndTerm.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -49,6 +51,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost("categories/add")]
         public Category AddCategory(Category category)
         {
@@ -61,6 +65,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("categories/update")]
         public IActionResult UpdateCategory(Category category)
         {
@@ -77,6 +83,8 @@ namespace EndTerm.Controllers.Api
         /// </summary>
         /// <param name="categoryId"></param>
         /// <returns></returns>
+        [Authorize(AuthenticationSchemes = 
+            JwtBearerDefaults.AuthenticationScheme)]
         [HttpDelete("categories/{categoryId}")]
         public IActionResult DeleteCategory(int categoryId)
         {
